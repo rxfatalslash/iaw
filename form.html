@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulario</title>
+        <meta charset="UTF-8">
+    </head>
+    <body style="text-align: center; width: 50%; margin-left: 25%;">
+        <h1>Formulario de datos</h1>
+        <form name="fdatos" method="post" action="recibeDatos.php" enctype="multipart/form-data">
+        <b>Nombre:</b> <input type="text" name="nombre" value="Escribe tu nombre" onfocus="if (this.value=='Escribe tu nombre') this.value=''" /> <br/>
+        <b>Contraseña:</b> <input type="password" name="pass" /> <br/>
+        <b>Oculto:</b> <input type="hidden" name="oculto" value="Invisible" /> <br/>
+        <b>Comentarios:</b> <textarea name="comentarios" rows="4" cols="30">Escribe tus comentarios...</textarea> <br/>
+
+        <b>Idioma:</b> <br/>
+        Inglés: <input type="radio" name="radio" value="English" /> <br/>
+        Español: <input type="radio" name="radio" value="Español" /> <br/>
+        Italiano: <input type="radio" name="radio" value="Italiano" /> <br/>
+
+        <b>¿Quiere recibir publicidad?:</b> Si <input type="checkbox" name="publicidad" value="Publicidad" /> <br/>
+
+        <b>Medio de contacto:</b> <br/>
+        Correo <input type="checkbox" name="medio[]" value="correo" /> <br/>
+        Movil <input type="checkbox" name="medio[]" value="movil" /> <br/>
+        SMS <input type="checkbox" name="medio[]" value="sms" /> <br/>
+            
+        <b>Año de finalización del ciclo:</b>
+            <select name="fin">
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+            </select>
+            <br/>
+
+        <b>Ciudades:</b>
+            <select name="ciudades[]" multiple="multiple">
+                <option value="Madrid">Madrid</option>
+                <option value="Gerona">Gerona</option>
+                <option value="Zaragoza">Zaragoza</option>
+            </select>
+            <br/>
+        <b>Subir archivos:</b>
+            <input type="file" name="archivo" />
+            <input type="hidden" name="max_file_size" value="4194304" /> <br/> <br/>
+
+            <!--Enviar-->
+            <button type="submit" value="Enviar" onclick="alert('Se va a enviar')" style="width:30px;">
+                <img src="./img/flecha.png" width="100%" />
+            </button>
+            <input type="reset" value="Limpiar" />
+            <input type="button" value="Mostrar un mensaje" onclick="alert('Hola bicharraco')" />
+        </form>
+    </body>
+</html>
