@@ -19,15 +19,3 @@ else {
 }
 
 document.write("<br>");
-
-valores = [4, "true", true, 34, "que pasa con el ejercicio anterior?", false, 23, "nusé", 2, true];
-
-function strings() {
-    for (i in valores) {
-        if (typeof valores[i] == "string") {
-            document.write(valores[i] + " ");
-        }
-    }
-}
-
-document.write(strings());
