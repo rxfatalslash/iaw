@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ecoparámetros</title>
+    </head>
+    <body>
+        <legend><h1>Aarón Sánchez</h1></legend>
+        <fieldset style="background-color: yellow;"> 
+            <form name="fdatos" method="post" action="recibeParametros.php" enctype="multipart/form-data">
+
+                <b>Nombre: </b><input type="text" name="nombre" /><br/><br/>
+
+                <b>Clave: </b><input type="password" name="clave" /><br/><br/>
+
+                <input type="hidden" name="oculto" />
+
+                <b>Colores: </b> <br/>
+                Rojo <input type="radio" name="colores[]" value="Rojo" />
+                Naranja <input type="radio" name="colores[]" value="Naranja" />
+                Verde <input type="radio" name="colores[]" value="Verde" /><br/><br/>
+                
+                <b>¿Quieres recibir publicidad?: </b><input type="checkbox" name="publicidad" value="OK" /><br/><br/>
+
+                <b>Idiomas: </b><br/>
+                    Español <input type="checkbox" name="idiomas[]" value="Español" /><br/>
+                    Inglés <input type="checkbox" name="idiomas[]" value="Inglés" /><br/>
+                    Alemán <input type="checkbox" name="idiomas[]" value="Alemán" /><br/><br/>
+
+                <b>Fecha de nacimiento: </b>
+                <select name="fechaNacimiento">
+                    <option value="2011">2011</option><br/>
+                    <option value="2012">2012</option><br/>
+                    <option value="2013">2013</option><br/>
+                    <option value="2014">2014</option><br/>
+                </select><br/><br/>
+                
+                <b>Ciudades: </b><select name="ciudades[]" multiple="multiple">
+                    <option value="Madrid">Madrid</option><br/>
+                    <option value="Barcelona">Barcelona</option><br/>
+                </select><br/><br/>
+
+                <b>Comentarios: </b><textarea name="comentarios" rows="5" cols="50">Escribe aquí sus comentarios...</textarea><br/><br/>
+
+                <b>Subir archivo: </b>
+                    <input type="file" name="foto" accept="image/jpeg, image/gif, image/png" />
+                                    <input type="hidden" name="max_file_size" value="5000000" /><br/><br/>
+                <!--Limpiar-->
+                <input type="reset" value="Limpiar" />
+                <!--Enviar-->
+                <input type="submit" name="enviar" value="Enviar" />
+                <!--Coordenadas-->
+                <input type="image" src="./img/flecha.png" name="imagen" action="submit" width="25px" />
+            </form>
+        </fieldset>
+    </body>
+</html>
