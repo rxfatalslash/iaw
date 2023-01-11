@@ -19,3 +19,5 @@ else {
 }
 
 document.write("<br>");
+
+document.write("Tus muertos");
