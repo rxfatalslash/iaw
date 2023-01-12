@@ -20,6 +20,8 @@ else {
     document.write(valores[4] + " es mayor que " + valores[3]);
 }
 
+document.write("<br>");
+
 if (long1 > long2) {
     document.write(valores[3] + " es mayor que " + valores[4]);
 }
@@ -29,4 +31,16 @@ else {
 
 document.write("<br>");
 
-function str()
+function contar() {
+    var count = 0;
+    for (i in valores) {
+        if (typeof valores[i] == "string") {
+            count++;
+        }
+    }
+    document.write("Hay " + count + " cadenas de texto");
+}
+
+var valores = [4, "pepe", true, 34, "que pasa con el ejercicio anterior?", false, 23, "nusé", 2, true]
+
+contar();
