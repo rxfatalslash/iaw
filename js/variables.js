@@ -75,7 +75,28 @@ function contarObjeto() {
     document.write("Hay " + count + " elementos dentro del objeto");
 }
 
-var valores = [4, "pepe", true, 34, "que pasa con el ejercicio anterior?", false, 23, "nusé", 2, true]
+function contarStr() {
+    var count = 0;
+    for (i in valores) {
+        if (typeof valores[i] == "string") {
+            count = i;
+        }
+    }
+    for (i = count; i < valores.length; i++) {
+        if (typeof valores[i] == "string") {
+            count1 = i;
+        }
+    }
+
+    if (valores[count] > valores[count1]) {
+        document.write(valores[count] + " es mayor que " + valores[count1]);
+    }
+    else {
+        document.write(valores[count1] + " es mayor que " + valores[count]);
+    }
+}
+
+valores = [4, "pepe", true, 34, "que pasa con el ejercicio anterior?", false, 23, "nusé", 2, true];
 
 contar();
 
@@ -86,3 +107,7 @@ contarObjeto();
 document.write("<br>");
 
 contarTipos();
+
+document.write("<br>");
+
+contarStr();
