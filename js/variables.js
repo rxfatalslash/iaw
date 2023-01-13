@@ -81,7 +81,6 @@ function contarStr() {
         if (typeof valores[i] == "string") {
             count = i;
             document.write(valores[count] + " ");
-            document.write("<br>");
         }
     }
 }
