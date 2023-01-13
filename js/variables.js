@@ -80,19 +80,9 @@ function contarStr() {
     for (i in valores) {
         if (typeof valores[i] == "string") {
             count = i;
+            document.write(valores[count] + " ");
+            document.write("<br>");
         }
-    }
-    for (i = count; i < valores.length; i++) {
-        if (typeof valores[i] == "string") {
-            count1 = i;
-        }
-    }
-
-    if (valores[count] > valores[count1]) {
-        document.write(valores[count] + " es mayor que " + valores[count1]);
-    }
-    else {
-        document.write(valores[count1] + " es mayor que " + valores[count]);
     }
 }
 
