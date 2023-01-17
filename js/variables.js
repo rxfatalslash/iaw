@@ -7,12 +7,15 @@ var fecha = new Date();
 var nada = null;
 var x;
 
+// Ejercicio 2
 document.write("<table><thead><th>v1</th><th>v2</th><th>v3</th><th>empleado</th><th>paises</th><th>fecha</th><th>nada</th><th>x</th></thead><tbody><tr><td>" + typeof v1 + "</td><td>" + typeof v2 + "</td><td>" + typeof v3 + "</td><td>" + typeof empleado + "</td><td>" + typeof paises + "</td><td>" + typeof fecha + "</td><td>" + typeof nada + "</td><td>" + typeof x + "</td></tr></tbody></table>");
 
 var valores = [true, 5, false, "hola", "adios", 2];
 var long1 = valores[3].length;
 var long2 = valores[4].length;
 
+// Ejercicio 4
+// Ejercicio 4.1
 if (valores[3] > valores[4]) {
     document.write(valores[3] + " es mayor que " + valores[4]);
 }
@@ -31,6 +34,24 @@ else {
 
 document.write("<br>");
 
+// Ejercicio 4.2
+if (valores[0] == true && valores[2] == false) {
+    document.write(valores[0] + " es true y " + valores[2] + " es false<br>");
+}
+
+// Ejercicio 4.3
+var suma = valores[1] + valores[5];
+var resta = valores[1] - valores[5];
+var multi = valores[1] * valores[5];
+var div = valores[1] / valores[5];
+var mod = valores[1] % valores[5];
+
+document.write("La suma es " + suma + ", la resta es " + resta + ", la multiplicación es " + multi + ", la división es " + div + " y el módulo es " + mod + "<br>");
+
+// Ejercicio 4.5
+document.write(valores.sort());
+
+// Ejercicio 5
 function contar() {
     var count = 0;
     for (i in valores) {
@@ -111,3 +132,6 @@ contarTipos();
 document.write("<br>");
 
 contarStr();
+
+document.write("<br>");
+
