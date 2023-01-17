@@ -49,7 +49,7 @@ var mod = valores[1] % valores[5];
 document.write("La suma es " + suma + ", la resta es " + resta + ", la multiplicación es " + multi + ", la división es " + div + " y el módulo es " + mod + "<br>");
 
 // Ejercicio 4.5
-document.write(valores.sort());
+document.write(valores.sort() + "<br>");
 
 // Ejercicio 5
 function contar() {
@@ -101,8 +101,19 @@ function contarStr() {
     for (i in valores) {
         if (typeof valores[i] == "string") {
             count = i;
-            document.write(valores[count] + " ");
         }
+    }
+    for (i = count; i < valores.length; i++) {
+        if (typeof valores[i] == "string") {
+            count1 = i;
+        }
+    }
+
+    if (valores[count] > valores[count1]) {
+        document.write(valores[count] + " es mayor que " + valores[count1]);
+    }
+    else {
+        document.write(valores[count1] + " es mayor que " + valores[count]);
     }
 }
 
