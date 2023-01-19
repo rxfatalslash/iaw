@@ -135,3 +135,12 @@ contarStr();
 
 document.write("<br>");
 
+var en = document.getElementById("enlace");
+en.innerHTML = "Hola";
+
+var pa = document.getElementsByTagName("p");
+document.write(pa[0].innerHTML);
+document.write(pa[1].innerHTML);
+
+var d = document.getElementsByClassName("porclase");
+d[0].innerHTML = ("Ahora ha cambiado");
