@@ -192,3 +192,10 @@ function cambiarColor() {
 
 var color = prompt("Introduce un color en hexadecimal");
 document.getElementById("cambiar").setAttribute("style", "background-color: #" + color);
+
+function validar() {
+    var x = document.forms["form1"]["nombre"].value;
+    if (x == null || x == "") {
+        
+    }
+}
