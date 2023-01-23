@@ -190,6 +190,5 @@ function cambiarColor() {
     }
 }
 
-var ast = "#";
 var color = prompt("Introduce un color en hexadecimal");
 document.getElementById("cambiar").setAttribute("style", "background-color: #" + color);
