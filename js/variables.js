@@ -135,12 +135,47 @@ contarStr();
 
 document.write("<br>");
 
+var e = document.getElementById("enlace");
+e.innerHTML = "Hola";
+
 var en = document.getElementById("enlace");
 en.innerHTML = "Hola";
 
 var pa = document.getElementsByTagName("p");
-document.write(pa[0].innerHTML);
+document.write(pa[0].innerHTML + " y ");
 document.write(pa[1].innerHTML);
 
 var d = document.getElementsByClassName("porclase");
 d[0].innerHTML = ("Ahora ha cambiado");
+
+alert(e.innerHTML);
+
+var capa1 = document.getElementById("div1");
+capa1.innerHTML = ("Nuevo contenido de div1");
+
+var capa2 = document.getElementById("div2");
+capa2.innerHTML = ("Nuevo contenido de div2");
+
+document.write("<br>" + new Date() + "<br>");
+
+// Añadimos el elemento p con JavaScript
+var parrafo = document.createElement("p");
+var nodo = document.createTextNode("Este párrafo es creado con JavaScript");
+parrafo.appendChild(nodo);
+document.body.appendChild(parrafo);
+
+var d = document.getElementsByTagName("div");
+// Coge el primer elemento <div>
+d[0].setAttribute("class", "class-demo");
+d[1].setAttribute("class", "class-demo1");
+d[2].setAttribute("class", "class-demo");
+
+// Crear elemento h4
+var cabecera4 = document.createElement("h4");
+            
+// Crear el texto
+var texto4 = document.createTextNode("Esto es un h4");
+// Asociar el texto con su elemento
+cabecera4.appendChild(texto4);
+// Asociar el elemento h4 a la página web
+document.body.appendChild(cabecera4);
