@@ -180,6 +180,7 @@ cabecera4.appendChild(texto4);
 // Asociar el elemento h4 a la página web
 document.body.appendChild(cabecera4);
 
+// Cambiar el color del botón
 function cambiarColor() {
     document.getElementById("cambiar").style.backgroundColor = "red";
 }
