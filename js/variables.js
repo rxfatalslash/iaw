@@ -8,7 +8,7 @@ var nada = null;
 var x;
 
 // Ejercicio 2
-document.write("<table><thead><th>v1</th><th>v2</th><th>v3</th><th>empleado</th><th>paises</th><th>fecha</th><th>nada</th><th>x</th></thead><tbody><tr><td>" + typeof v1 + "</td><td>" + typeof v2 + "</td><td>" + typeof v3 + "</td><td>" + typeof empleado + "</td><td>" + typeof paises + "</td><td>" + typeof fecha + "</td><td>" + typeof nada + "</td><td>" + typeof x + "</td></tr></tbody></table>");
+document.write("<div style='margin-left: 35%;'><table><thead><th>v1</th><th>v2</th><th>v3</th><th>empleado</th><th>paises</th><th>fecha</th><th>nada</th><th>x</th></thead><tbody><tr><td>" + typeof v1 + "</td><td>" + typeof v2 + "</td><td>" + typeof v3 + "</td><td>" + typeof empleado + "</td><td>" + typeof paises + "</td><td>" + typeof fecha + "</td><td>" + typeof nada + "</td><td>" + typeof x + "</td></tr></tbody></table></div>");
 
 var valores = [true, 5, false, "hola", "adios", 2];
 var long1 = valores[3].length;
@@ -179,3 +179,7 @@ var texto4 = document.createTextNode("Esto es un h4");
 cabecera4.appendChild(texto4);
 // Asociar el elemento h4 a la página web
 document.body.appendChild(cabecera4);
+
+function cambiarColor() {
+    document.getElementById("cambiar").style.backgroundColor = "red";
+}
