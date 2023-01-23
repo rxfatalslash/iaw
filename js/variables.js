@@ -182,5 +182,14 @@ document.body.appendChild(cabecera4);
 
 // Cambiar el color del botón
 function cambiarColor() {
-    document.getElementById("cambiar").style.backgroundColor = "red";
+    if (document.getElementById("cambiar").style.backgroundColor == "white") {
+        document.getElementById("cambiar").setAttribute("style", "background-color: red;");
+    }
+    else {
+        document.getElementById("cambiar").setAttribute("style", "background-color: white;");
+    }
 }
+
+var ast = "#";
+var color = prompt("Introduce un color en hexadecimal");
+document.getElementById("cambiar").setAttribute("style", "background-color: #" + color);
