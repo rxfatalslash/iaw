@@ -1,0 +1,12 @@
+html {
+    text-align: center;
+    background-color: lightgreen;
+}
+.class-demo {
+    color: red;
+    border: solid 2px;
+}
+.class-demo1 {
+    color: green;
+    border: solid 2px;
+}
