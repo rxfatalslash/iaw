@@ -196,6 +196,7 @@ document.getElementById("cambiar").setAttribute("style", "background-color: #" +
 function validar() {
     var x = document.forms["form1"]["nombre"].value;
     if (x == null || x == "") {
-        
+        alert("Debes rellenar el formulario");
+        return false;
     }
 }
