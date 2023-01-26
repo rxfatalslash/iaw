@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Envía y recibe</title>
+    </head>
+    <body style="text-align: center; width: 50%; margin-left: 25%; background-color: #82E0AA">
+    <fieldset style="border: none; border-radius: 15px;">
+        <h1>Formulario de datos</h1>
+        <fieldset style="background-color: #2ECC71; border: none; border-radius: 15px;">
+            <form name="fdatos" method="post" onsubmit="return validar()" enctype="multipart/form-data">
+            <b>Nombre:</b> <input style="background-color: #D5F5E3; border: none; border-radius: 15px;" type="text" name="nombre" /> <br/><br/>
+            <b>Contraseña:</b> <input style="background-color: #D5F5E3; border: none; border-radius: 15px;" type="password" name="clave" /> <br/><br/>
+            <b>Género:</b>
+                Hombre: <input type="radio" name="genero" value="H" />
+                Mujer: <input type="radio" name="genero" value="M" /> <br/><br/>
+            <b>Fecha de nacimiento: </b> <input type="text" name="fechaNacimiento" /> <br/><br/>
+            <b>País: </b> <select name="pais" multiple="multiple">
+                <option value="España">España</option> <br/><br/>
+                <option value="Francia">Francia</option> <br/><br/>
+                <option value="Italia">Italia</option>
+            </select> <br/><br/>
+
+            <b>¿Quiere recibir publicidad?:</b> Si <input type="checkbox" name="acepto" value="Publicidad" /> <br/><br/>
+            <b>Comentarios: </b> <textarea style="background-color: #D5F5E3; border: none; border-radius: 15px;" name="comentarios" rows="5" cols="50"></textarea> <br/><br/>
+            <b>Subir archivos:</b>
+                <input type="file" name="foto" accept="image/jpeg, image/gif, image/png" />
+                <input type="hidden" name="max_file_size" value="5000000" /><br/><br/>
+
+                <!--Enviar-->
+                <button type="submit" value="Enviar">Enviar</button>
+                <input type="reset" value="Limpiar" />
+                <input type="button" value="Mostrar un mensaje" onclick="alert('Hola bicharraco')" />
+            </form>
+        </fieldset>
+        <script type="text/javascript" src="./validar.js"></script>
+    </body>
+</html>
