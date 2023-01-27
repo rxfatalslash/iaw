@@ -1,38 +1,57 @@
 function validar() {
+    let errores = "";
+
     // Nombre
-    let nombre = document.getElementsByName('nombre').value;
+    let nombre = document.forms["fdatos"]["nombre"].value;
     if (nombre == null || nombre == "") {
-        alert("Añade un nombre");
+        errores = "Introduce un nombre\n";
     }
 
     // Contraseña
-    let clave = document.getElementsByName('clave').value;
+    let clave = document.forms["fdatos"]["clave"].value;
     if (clave == null || clave == "") {
-        alert("Añade una contraseña");
+        errores = errores + "Introduce una contraseña\n";
     }
 
-    // Género
-    let gen_selected = false;
-    let generos = document.getElementsByName('genero');
-    for (let genero of generos) {
-        if (genero.checked) {
-            gen_selected = true;
-        }
-    }
-
-    if (!gen_selected) {
-        alert("Selecciona un género");
+    let genero = document.forms["fdatos"]["genero"].value;
+    if (genero == null || genero == "") {
+        errores = errores + "Selecciona un género\n";
     }
 
     // Fecha de nacimiento
-    let fecha = document.getElementsByName('fecha').value;
+    let fecha = document.forms["fdatos"]["fechaNacimiento"].value;
     if (fecha == null || fecha == "") {
-        alert("Introduce una fecha");
+        errores = errores + "Selecciona tu fecha de nacimiento\n";
     }
 
     // País
-    let pais = document.getElementsByName('pais').value;
+    let pais = document.forms["fdatos"]["pais"].value;
     if (pais == null || pais == "") {
-        alert("Elige un país");
+        errores = errores + "Seleccione uno o más países\n";
+    }
+
+    // Checkbox
+    let acepto = document.forms["fdatos"]["aceptar"].value;
+    if (acepto == null || acepto == "") {
+        errores = errores + "Acepta la publicidad\n";
+    }
+
+    // Comentarios
+    let comentarios = document.forms["fdatos"]["comentarios"].value;
+    if (comentarios == null || comentarios == "") {
+        errores = errores + "No se han enviado comentarios\n";
+    }
+
+    // Archivo
+    let file = document.forms["fdatos"]["foto"].value;
+    if (file == null || file == "") {
+        errores = errores + "No se ha enviado ningún archivo";
+    }
+
+    if (errores == null || errores == "") {
+        alert("Has rellenado todos los campos");
+    }
+    else {
+        alert(errores);
     }
 }
