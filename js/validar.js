@@ -2,9 +2,13 @@ function validar() {
     let errores = "";
 
     // Nombre
+    let nomVal = "[A-Za-z]{4}";
     let nombre = document.forms["fdatos"]["nombre"].value;
     if (nombre == null || nombre == "") {
         errores = "Introduce un nombre\n";
+    }
+    else if (nombre.match(nomVal) == null) {
+        alert("El nombre debe tener 4 caracteres de la A a la Z");
     }
 
     // Contraseña
