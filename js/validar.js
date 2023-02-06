@@ -16,6 +16,9 @@ function validar() {
     if (clave == null || clave == "") {
         errores = errores + "Introduce una contraseña\n";
     }
+    else if (clave.length < 6 || clave.length > 12) {
+        alert("La contraseña debe tener entre 6 y 12 caracteres");
+    }
 
     let genero = document.forms["fdatos"]["genero"].value;
     if (genero == null || genero == "") {
@@ -52,10 +55,7 @@ function validar() {
         errores = errores + "No se ha enviado ningún archivo";
     }
 
-    if (errores == null || errores == "") {
-        alert("Has rellenado todos los campos");
-    }
-    else {
+    if (!errores == null || !errores == "") {
         alert(errores);
     }
 }
