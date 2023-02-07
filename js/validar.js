@@ -37,6 +37,18 @@ function validar() {
         errores = errores + "Seleccione uno o más países\n";
     }
 
+    // Afición
+    let aficion = document.forms["fdatos"]["aficion"].value;
+    let cont = 0;
+    for (i in aficion) {
+        if (aficion[i].checked) {
+            cont++;
+        }
+    }
+    if (cont == 0 || cont == 1) {
+        errores = errores + "Debes seleccionar mínimo dos aficiones\n";
+    }
+
     // Checkbox
     let acepto = document.forms["fdatos"]["aceptar"].value;
     if (acepto == null || acepto == "") {
@@ -51,8 +63,12 @@ function validar() {
 
     // Archivo
     let file = document.forms["fdatos"]["foto"].value;
+    let type = /(.jpg|.jepg|.png|.gif)$/i;
     if (file == null || file == "") {
         errores = errores + "No se ha enviado ningún archivo";
+    }
+    else if (file.files[0].size > 450) {
+        alert("El archivo pesa mucho");
     }
 
     if (!errores == null || !errores == "") {
