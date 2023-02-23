@@ -17,20 +17,20 @@
                 Hombre: <input type="radio" name="genero" value="H" />
                 Mujer: <input type="radio" name="genero" value="M" /> <br/><br/>
             <b>Fecha de nacimiento: </b> <input type="date" name="fechaNacimiento" /> <br/><br/>
-            <b>País: </b> <select name="pais" multiple="multiple">
+            <b>País: </b> <select name="pais[]" multiple="multiple">
                 <option value="España">España</option> <br/><br/>
                 <option value="Francia">Francia</option> <br/><br/>
                 <option value="Italia">Italia</option>
             </select> <br/><br/>
             
             <b style="text-align: center;">Aficiones:</b>
-            <input type="checkbox" id="futbol" name="aficion">
+            <input type="checkbox" id="futbol" name="aficion[]">
             <label for="futbol">Fútbol</label>
 
-            <input type="checkbox" id="videojuegos" name="aficion">
+            <input type="checkbox" id="videojuegos" name="aficion[]">
             <label for="videojuegos">Videojuegos</label>
 
-            <input type="checkbox" id="informatica" name="aficion">
+            <input type="checkbox" id="informatica" name="aficion[]">
             <label for="informatica">Informática</label> <br><br>
 
             <b>¿Quiere recibir publicidad?:</b> Si <input type="checkbox" name="aceptar" value="Publicidad" /> <br/><br/>

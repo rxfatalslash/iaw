@@ -32,13 +32,13 @@ function validar() {
     }
 
     // País
-    let pais = document.forms["fdatos"]["pais"].value;
+    let pais = document.forms["fdatos"]["pais[]"].value;
     if (pais == null || pais == "") {
         errores = errores + "Seleccione uno o más países\n";
     }
 
     // Afición
-    let aficion = document.forms["fdatos"]["aficion"].value;
+    let aficion = document.forms["fdatos"]["aficion"];
     let cont = 0;
     for (i in aficion) {
         if (aficion[i].checked) {
